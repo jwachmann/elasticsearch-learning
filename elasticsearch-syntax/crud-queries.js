@@ -39,17 +39,3 @@ q=
 
 // Delete a document by id
 // DELETE people/_doc/1
-
-// Get list of values for a field and how many docs contain it (categories)
-// GET people/_search
-q=
-{
-  "aggs": {
-    "by_type": {
-      "terms": {
-        "field": "job",
-        "size": 100
-      }
-    }
-  }
-}
